@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24c6accfa0388544090f6c6e2e007296
+    m_Address: main
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2d18acd319cfe5c428ad2ecdeee69d0b
     m_Address: Title
     m_ReadOnly: 0

@@ -3,6 +3,7 @@ using AppCore.Runtime;
 using Cysharp.Threading.Tasks;
 using R3;
 using TweetWithScreenShot;
+using UnityEngine.AddressableAssets;
 
 namespace App.Title
 {
@@ -50,10 +51,12 @@ namespace App.Title
                     .SubscribeAwait(
                         async (_, token) =>
                         {
-                            await owner.Director.PushAsync("SampleGame").ToUniTask(cancellationToken: token);
+                            await Addressables.LoadSceneAsync("main").ToUniTask(cancellationToken:token);                     
+                     //                       {
+                     //       await owner.Director.PushAsync("SampleGame").ToUniTask(cancellationToken: token);
                         }, AwaitOperation.Drop
-                    ).RegisterTo(owner.cts.Token);
-                
+                     ).RegisterTo(owner.cts.Token);
+
                 view.OnClickedAudioDemo.SubscribeAwait(
                     async (_, token) =>
                     {
